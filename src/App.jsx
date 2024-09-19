@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './App.css';
+import Fighter from './components/Fighter';
 
 const zombieFightersData = [
   {
@@ -108,14 +109,15 @@ const App = () => {
       <h3>Fighters</h3>
       <ul>
         {zombieFighters.map((fighter, index) => (
-          <li key={index}>
-            <img src={fighter.img} alt={fighter.name} />
-            <div>{fighter.name}</div>
-            <div>Price: {fighter.price}</div>
-            <div>Strength: {fighter.strength}</div>
-            <div>Agility: {fighter.agility}</div>
-            <button onClick={() => handleAddFighter(fighter)}>Add</button>
-          </li>
+          // <li key={index}>
+          //   <img src={fighter.img} alt={fighter.name} />
+          //   <div>{fighter.name}</div>
+          //   <div>Price: {fighter.price}</div>
+          //   <div>Strength: {fighter.strength}</div>
+          //   <div>Agility: {fighter.agility}</div>
+          //   <button onClick={() => handleAddFighter(fighter)}>Add</button>
+          // </li>
+          <Fighter fighter={fighter} handleAddFighter={handleAddFighter}/>
         ))}
       </ul>
 
